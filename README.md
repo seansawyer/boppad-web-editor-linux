@@ -8,6 +8,12 @@ Just clone/download the project and open `editor.html` directly from disk in you
 
 Tested in Arch Linux.
 
-Works when using Chromium (tested with 111.0.5563.110).
+Works using Chromium (tested with 111.0.5563.110).
 
-Doesn't work in Firefox (tested with 111.0.1).  Even when everything is delivered from `file:///`, which should be a secure context, `Navigator.requestMIDIAccess()` is not available.
+Doesn't work in Firefox (tested with 111.0.1) when loaded via `file://`.  Even though this should be a secure context, `Navigator.requestMIDIAccess()` is not available.  A workaround for Firefox is to serve the editor locally.  An easy way to do this if you have Python 3 installed is to run the following from inside the project directory:
+
+```
+python -m http.server
+```
+
+Then visit http://localhost:8000/editor.html in Firefox to use the editor.
