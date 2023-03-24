@@ -1,6 +1,8 @@
 # boppad-web-editor-linux
 
-BopPad web editor hacked up a tiny bit for Linux support.
+Web editor for [Keith McMillen Instruments BopPad](https://www.keithmcmillen.com/products/boppad/), hacked up a tiny bit for Linux support.
+
+Official editor lives [here](https://files.keithmcmillen.com/products/boppad/editor/).
 
 Tested in Arch Linux.
 
