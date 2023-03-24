@@ -21485,7 +21485,7 @@
                 r[n] = e[n];
             return r
         }
-        var fe, pe, c, me, ge, h = "BopPad", ve = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ye = "", be = !0, _e = E()() && "Win32" == navigator.platform ? 1e3 : 0;
+        var fe, pe, c, me, ge, h = "BopPad MIDI 1", ve = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ye = "", be = !0, _e = E()() && "Win32" == navigator.platform ? 1e3 : 0;
         if ("requestMIDIAccess"in navigator)
             try {
                 navigator.requestMIDIAccess({
@@ -24411,6 +24411,11 @@
                 e.preventDefault()
             })),
             document.querySelector("#logo h1").textContent = globalThis.BOPPAD_BETA ? "BetaPad" : "BopPad"
+            // For some reason two SVG diagrams show up, so if there are two, remove the second one.
+            var svgs = document.querySelectorAll('#svg_boppad')
+            for (var svgi = 1; svgi < svgs.length; svgi++) {
+                svgs[svgi].remove()
+            }
         }
         ,
         t = [t, e],
