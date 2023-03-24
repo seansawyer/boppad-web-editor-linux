@@ -24411,7 +24411,7 @@
                 e.preventDefault()
             })),
             document.querySelector("#logo h1").textContent = globalThis.BOPPAD_BETA ? "BetaPad" : "BopPad"
-            // For some reason two SVG diagrams show up, so if there are two, remove the second one.
+            // For some reason two SVG diagrams of the pad show up. If there is more than one, remove any extras.
             var svgs = document.querySelectorAll('#svg_boppad')
             for (var svgi = 1; svgi < svgs.length; svgi++) {
                 svgs[svgi].remove()
