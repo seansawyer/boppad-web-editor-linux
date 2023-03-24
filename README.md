@@ -4,7 +4,7 @@ Web editor for [Keith McMillen Instruments BopPad](https://www.keithmcmillen.com
 
 Official editor lives [here](https://files.keithmcmillen.com/products/boppad/editor/).
 
-Just open `editor.html` directly from disk in your browser.
+Just clone/download the project and open `editor.html` directly from disk in your browser.
 
 Tested in Arch Linux.
 
