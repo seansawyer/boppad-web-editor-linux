@@ -21485,12 +21485,18 @@
                 r[n] = e[n];
             return r
         }
-        var fe, pe, c, me, ge, h = "BopPad MIDI 1", ve = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ye = "", be = !0, _e = E()() && "Win32" == navigator.platform ? 1e3 : 0;
+        var fe, pe, c, me, ge, h = "BopPad", ve = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ye = "", be = !0, _e = E()() && "Win32" == navigator.platform ? 1e3 : 0;
         if ("requestMIDIAccess"in navigator)
             try {
                 navigator.requestMIDIAccess({
                     sysex: !0
                 }).then(function(e) {
+                    for (const [inputKey, inputValue] of e.inputs.entries()) {
+                        if (inputValue.name.includes("BopPad")) {
+                            h = inputValue.name
+                            console.log("BopPad input name: " + h)
+                        }
+                    }
                     c = webmidi(fe = e, globalThis.BOPPAD_BETA),
                     (window.midi = fe).addEventListener("statechange", deviceSetup),
                     pe = updater(fe),
